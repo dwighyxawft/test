@@ -59,6 +59,7 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *       200:
  *         description: User registered successfully
  */
+router.post("/register", controller.register);
 
 /**
  * @swagger
@@ -85,6 +86,7 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *       200:
  *         description: User logged in successfully
  */
+router.post("/auth/login", controller.login);
 
 /**
  * @swagger
@@ -97,6 +99,7 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *       200:
  *         description: User details retrieved successfully
  */
+router.get("/find", middleware, controller.find);
 
 /**
  * @swagger
@@ -130,6 +133,8 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *         description: User details updated successfully
  */
 
+router.put("/update", middleware, controller.update);
+
 /**
  * @swagger
  * /terminate:
@@ -141,11 +146,6 @@ router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *       200:
  *         description: User terminated successfully
  */
-
-router.post("/register", controller.register);
-router.post("/auth/login", controller.login);
-router.get("/find", middleware, controller.find);
-router.put("/update", middleware, controller.update);
 router.delete("/terminate", middleware, controller.terminate);
 
 module.exports = router;
