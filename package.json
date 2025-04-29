@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "version": "1.0.1",
+  "description": "A full stack developers test",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwighyxawft/test.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "test",
+    "backend",
+    "fronntend"
+  ],
+  "author": "xawft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwighyxawft/test/issues"
+  },
+  "homepage": "https://github.com/dwighyxawft/test#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
